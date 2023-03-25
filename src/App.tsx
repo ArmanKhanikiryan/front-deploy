@@ -7,7 +7,6 @@ import Products from "./pages/products";
 import Service from "./pages/service";
 import Footer from "./components/footer";
 import { Provider } from "react-redux";
-import store from "./features/store";
 
 export enum RoutesEnum {
   HOME = "/",
@@ -40,7 +39,6 @@ const RouteData: RouteType[] = [
 
 const App = () => {
   return (
-    <Provider store={store}>
       <div className="App">
         <Navbar />
         <Routes>
@@ -49,7 +47,6 @@ const App = () => {
           ))}
         </Routes>
       </div>
-    </Provider>
   );
 };
 

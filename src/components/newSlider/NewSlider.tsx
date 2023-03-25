@@ -1,12 +1,18 @@
-import React, { useState, useEffect, FC } from "react";
+import React, { useState, useEffect } from "react";
 import { Grid } from "@mui/material";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import "./NewSlider.css";
-
+import facade1 from '../../assets/images/facade1.webp'
+import facade2 from '../../assets/images/facade2.webp'
+import facade3 from '../../assets/images/facade3.webp'
+import facade4 from '../../assets/images/facade4.webp'
 
 const imagesArray: string[] = [
-
+    facade1,
+    facade2,
+    facade3,
+    facade4
 ]
 const NewSlider = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);

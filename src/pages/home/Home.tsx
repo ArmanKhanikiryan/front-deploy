@@ -6,19 +6,13 @@ import handrail from "assets/icons/handrail.png";
 import slide from "assets/icons/sliding-door.png";
 import termo from 'assets/icons/termo.png';
 import { useTranslation } from "react-i18next";
-import {useAppDispatch, useAppSelector} from "../../features/store";
-import {getMainImages} from "../../features/mainSlider/mainSliderSlice";
 import NewSlider from "components/newSlider";
 import {useNavigate} from "react-router";
 import Footer from "../../components/footer";
 
 const Home = () => {
   const { t } = useTranslation();
-  const mainSlider = useAppSelector(state => state.mainSlider)
-  const dispatch = useAppDispatch()
-  useEffect(() => {
-      dispatch(getMainImages())
-  }, [])
+
   const navigate = useNavigate()
   return (
     <>
