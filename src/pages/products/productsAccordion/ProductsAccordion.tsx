@@ -139,6 +139,7 @@ const ProductsAccordion: FC<TProductsAccordionProps> = ({
       resetClicked();
     } else if (navigationParameter === "termo") {
       setExpanded("panel1");
+      resetClicked()
     } else if (navigationParameter === "metal-plastic") {
       setExpanded("panel2");
       resetClicked();

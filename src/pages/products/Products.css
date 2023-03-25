@@ -68,6 +68,12 @@
         min-width: 280px;
     }
 }
+@media screen and (max-width: 1275px){
+    .product_card_span{
+        font-size: 12px;
+    }
+}
+
 @media screen and (max-width: 290px){
     .popup_image{
         min-height: 230px;
@@ -105,7 +111,6 @@
 
 .product_card_span{
     text-align: center;
-    margin-top: 15px;
 }
 
 .products_list_image {
@@ -125,7 +130,13 @@
     }
 }
 
-@media screen and (max-width: 440px){
+@media screen and (max-width: 375px){
+    .product_card_span{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 275px){
     .product_card_span{
         display: none;
     }
