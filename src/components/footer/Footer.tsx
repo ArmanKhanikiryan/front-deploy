@@ -45,7 +45,7 @@ const Footer = () => {
 
                <div className="body_parts">
                        <h2 style={{fontWeight: '500'}}>{t("Contact Info")}</h2>
-                       <span>info.proffsystem@gmail.com</span>
+                       <span>proffsystem@gmail.com</span>
                        <span>+37491374520</span>
                        <span>+37495778844</span>
 
@@ -101,7 +101,7 @@ const Footer = () => {
                         <h3>{t("Contact Info")}</h3>
                         <span>+37491374520</span>
                         <span>+37495778844</span>
-                        <span className='mail'>info.proffsystem@gmail.com</span>
+                        <span className='mail'>proffsystem@gmail.com</span>
                     </div>
 
                     <div className='mobile_body_parts'>

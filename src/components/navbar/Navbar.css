@@ -89,7 +89,7 @@
     cursor: pointer;
 }
 .dropdown_component:hover > .dropdown{
-    z-index: 1;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     padding: 0 20px 10px 0;
@@ -99,7 +99,7 @@
 }
 
 .dropdown_component:hover > .dropdown_about{
-    z-index: 1;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     padding: 0 20px 10px 0;
@@ -110,7 +110,7 @@
 
 
 .dropdown_component:hover > .dropdown_products{
-    z-index: 1;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     padding: 0 20px 10px 0;
@@ -305,19 +305,18 @@
     .contact{
         display: none;
     }
+    .menu_dropdown{
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
 }
 
 @media screen and (max-width: 250px) {
     .logo{
         display: none;
     }
-    .menu_icon{
-        width: 60px;
-    }
     .menu_dropdown{
-        margin: 0;
-    }
-    .company_name{
-        display: block;
+        right: 35%;
     }
 }

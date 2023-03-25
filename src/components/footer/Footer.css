@@ -36,6 +36,7 @@
 }
 
 .copy_right_wrapper{
+    margin-top: 15px;
     width: 80%;
     border-top: 1px solid lightgrey;
     height: 10vh;
@@ -53,7 +54,9 @@
 .copy_right > span{
     margin-left: 5px;
 }
-
+.social_networks{
+    margin-top: 20px;
+}
 .social_network_item{
     margin: 5px;
     cursor: pointer;

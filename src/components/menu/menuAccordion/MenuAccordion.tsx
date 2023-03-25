@@ -10,6 +10,7 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import {useNavigate} from "react-router";
 import {useTranslation} from "react-i18next";
+import {FC} from "react";
 
 const Accordion = styled((props: AccordionProps) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -43,7 +44,11 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
     borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
-const MenuAccordion = () => {
+type TMenuProps = {
+    handleClose: () => void
+}
+
+const MenuAccordion:FC<TMenuProps> = ({handleClose}) => {
 
     const [expanded, setExpanded] = React.useState<string | false>(false);
     const handleChange =
@@ -60,16 +65,28 @@ const MenuAccordion = () => {
                 <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
                     <Typography>{t("Products")}</Typography>
                 </AccordionSummary>
-                <AccordionDetails onClick={() => navigate('/products', {state: 'doors'})} className='accordion_inner_element'>
+                <AccordionDetails onClick={() => {
+                    handleClose()
+                    navigate('/products', {state: 'doors'})
+                }} className='accordion_inner_element'>
                     <span>{t("Doors")}</span>
                 </AccordionDetails>
-                <AccordionDetails onClick={() => navigate('/products', {state: 'windows'})} className='accordion_inner_element'>
+                <AccordionDetails onClick={() => {
+                    handleClose()
+                    navigate('/products', {state: 'windows'})
+                }} className='accordion_inner_element'>
                     <span>{t("Windows")}</span>
                 </AccordionDetails>
-                <AccordionDetails onClick={() => navigate('/products', {state: 'slide'})} className='accordion_inner_element'>
+                <AccordionDetails onClick={() => {
+                    handleClose()
+                    navigate('/products', {state: 'slide'})
+                }} className='accordion_inner_element'>
                     <span>{t("Slides")}</span>
                 </AccordionDetails>
-                <AccordionDetails onClick={() => navigate('/products', {state: 'termo'})} className='accordion_inner_element'>
+                <AccordionDetails onClick={() => {
+                    handleClose()
+                    navigate('/products', {state: 'termo'})
+                }} className='accordion_inner_element'>
                     <span>{t("Termo")}</span>
                 </AccordionDetails>
             </Accordion>
@@ -78,16 +95,28 @@ const MenuAccordion = () => {
                 <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
                     <Typography>{t("Service")}</Typography>
                 </AccordionSummary>
-                <AccordionDetails onClick={() => navigate('/service/1s')} className='accordion_inner_element'>
+                <AccordionDetails onClick={() => {
+                    handleClose()
+                    navigate('/service/1s')
+                }} className='accordion_inner_element'>
                     <span>{t("Free Measurement")}</span>
                 </AccordionDetails>
-                <AccordionDetails onClick={() => navigate('/service/2s')} className='accordion_inner_element'>
+                <AccordionDetails onClick={() => {
+                    handleClose()
+                    navigate('/service/2s')
+                }} className='accordion_inner_element'>
                     <span>{t("Free Consultation")}</span>
                 </AccordionDetails>
-                <AccordionDetails onClick={() => navigate('/service/3s')} className='accordion_inner_element'>
+                <AccordionDetails onClick={() => {
+                    handleClose()
+                    navigate('/service/3s')
+                }} className='accordion_inner_element'>
                     <span>{t("Free Installation")}</span>
                 </AccordionDetails>
-                <AccordionDetails onClick={() => navigate('/service/3s')} className='accordion_inner_element'>
+                <AccordionDetails onClick={() => {
+                    handleClose()
+                    navigate('/service/3s')
+                }} className='accordion_inner_element'>
                     <span>{t("One Year Warranty Service")}</span>
                 </AccordionDetails>
             </Accordion>
@@ -96,10 +125,16 @@ const MenuAccordion = () => {
                 <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
                     <Typography>{t('About Us')}</Typography>
                 </AccordionSummary>
-                <AccordionDetails onClick={() => navigate('/about-us')} className='accordion_inner_element'>
+                <AccordionDetails onClick={() => {
+                    handleClose()
+                    navigate('/about-us')
+                }} className='accordion_inner_element'>
                     <span>{t("Our Works")}</span>
                 </AccordionDetails>
-                <AccordionDetails onClick={() => navigate('/about-us')} className='accordion_inner_element'>
+                <AccordionDetails onClick={() => {
+                    handleClose()
+                    navigate('/about-us')
+                }} className='accordion_inner_element'>
                     <span>{t("Our Company")}</span>
                 </AccordionDetails>
             </Accordion>

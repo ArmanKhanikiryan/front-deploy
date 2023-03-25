@@ -14,11 +14,12 @@ import {useNavigate} from "react-router";
 import MenuAccordion from "./menuAccordion";
 import LanguageSelector from "../languageSelector";
 import {useTranslation} from "react-i18next";
+import {useState} from "react";
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
 const Menu = () => {
-    const [state, setState] = React.useState({
+    const [state, setState] = useState({
         top: false,
         left: false,
         bottom: false,
@@ -26,6 +27,9 @@ const Menu = () => {
     });
     const navigate = useNavigate()
     const { t } = useTranslation()
+    const handleClose = () => {
+        setState({...state, right: false})
+    }
     const toggleDrawer =
         (anchor: Anchor, open: boolean) =>
             (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -47,30 +51,45 @@ const Menu = () => {
         >
             <List>
                 <div className='logo_menu_div'>
-                <img className='logo_menu' onClick={() => navigate('/')} src={logo} alt="logo"/>
+                <img className='logo_menu' onClick={() => {
+                    handleClose()
+                    navigate('/')
+                }} src={logo} alt="logo"/>
                 </div>
-                <div className='icons_wrapper_menu' onClick={() => navigate('/products', {state: 'door-pvc'})}>
+                <div className='icons_wrapper_menu' onClick={() => {
+                    handleClose()
+                    navigate('/products', {state: 'door-pvc'})}
+                }>
                     <img className='header_icons_menu' src={door} alt="door"/>
                     <span> {t("Doors")} </span>
                 </div>
 
-                <div className='icons_wrapper_menu' onClick={() => navigate('/products', {state: 'window-pvc'})}>
+                <div className='icons_wrapper_menu' onClick={() => {
+                    handleClose()
+                    navigate('/products', {state: 'window-pvc'})
+                }}>
                     <img className='header_icons_menu' src={window} alt="window"/>
                     <span> {t("Windows")} </span>
                 </div>
 
-                <div className='icons_wrapper_menu' onClick={() => navigate('/products', {state: 'handrails'})}>
+                <div className='icons_wrapper_menu' onClick={() => {
+                    handleClose()
+                    navigate('/products', {state: 'handrails'})
+                }}>
                     <img className='header_icons_menu' src={handrail} alt="window"/>
                     <span>{t("Handrails")}</span>
                 </div>
 
-                <div className='icons_wrapper_menu' onClick={() => navigate('/products', {state: 'slide'})}>
+                <div className='icons_wrapper_menu' onClick={() => {
+                    handleClose()
+                    navigate('/products', {state: 'slide'})
+                }}>
                     <img className='header_icons_menu' src={slide} alt="slide"/>
                     <span>{t("Slide")}</span>
                 </div>
             </List>
             <List>
-                    <MenuAccordion/>
+                    <MenuAccordion handleClose={handleClose}/>
             </List>
             <div className='language_selector_menu'>
                 <LanguageSelector/>
