@@ -1,0 +1,121 @@
+.footer_wrapper{
+    border-top: 2px solid lightgrey;
+    margin-top: 30px;
+    width: 90%;
+    min-height: fit-content;
+    flex-direction: column;
+    height: 35vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_body{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.body_parts{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.body_parts h2 {
+    cursor: pointer;
+}
+.body_parts > h2:hover{
+    color: #7a7676;
+}
+.body_parts > span {
+    font-size: 19px;
+    cursor: pointer;
+}
+.body_parts > span:hover{
+    color: #b9abab;
+}
+
+.copy_right_wrapper{
+    width: 80%;
+    border-top: 1px solid lightgrey;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: space-between;
+}
+.copy_right{
+    display: flex;
+    height: fit-content;
+    align-items: center;
+}
+
+.copy_right > span{
+    margin-left: 5px;
+}
+
+.social_network_item{
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+}
+
+.mobile_footer{
+    display: none;
+}
+
+
+.mobile_part1{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+.mobile_body_parts{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.mobile_body_parts > span{
+    cursor: pointer;
+}
+.mobile_body_parts > h3 {
+    cursor: pointer;
+}
+.mobile_body_parts > h3:hover {
+    color: #b9abab;
+}
+.mobile_body_parts > span:hover{
+    color: #b9abab;
+}
+@media screen and  (max-width: 700px){
+    .body_parts > span {
+        font-size: 13px;
+    }
+}
+@media screen and  (max-width: 290px) {
+    .mobile_part1 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mail{
+        display: none;
+    }
+}
+
+
+@media screen and  (max-width: 580px){
+    .mobile_footer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer_wrapper{
+        display: none;
+    }
+}

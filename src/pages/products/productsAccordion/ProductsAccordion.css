@@ -1,0 +1,41 @@
+.product_accordion_wrapper{
+    max-width: 25%;
+    min-width: 300px;
+    margin-left: 50px;
+}
+
+.product_accordion_single{
+    border-right: 1px solid lightgrey;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #F7F7F7 50%, rgba(188,207,215, 0.6) 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.5s ease;
+}
+
+.product_accordion_single:hover{
+    background-position: -100% 0;
+    opacity: 0.6;
+}
+
+.product_accordion_inner_element{
+    padding: 0;
+    cursor: pointer;
+    background-color: white;
+    background-image: linear-gradient(to right, white 50%, rgba(188,207,215, 0.6) 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.5s ease;
+}
+.product_accordion_inner_element:hover{
+    background-position: -100% 0;
+    opacity: 0.6;
+}
+
+.product_accordion_inner_element_clicked{
+    background-color: rgba(188,207,215, 0.6);
+}
+
+@media screen and (max-width: 450px){
+    .product_accordion_wrapper{
+        margin: 0;
+    }
+}
