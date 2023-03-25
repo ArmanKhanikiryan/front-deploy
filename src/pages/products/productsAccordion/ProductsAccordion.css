@@ -36,6 +36,24 @@
 
 @media screen and (max-width: 450px){
     .product_accordion_wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .product_accordion_title{
+        width: 77%;
+    }
+    .product_accordion_inner_element_clicked{
+        min-width: fit-content;
+    }
+    .product_accordion_single{
+        width: 65.5%;
+    }
+}
+
+
+@media screen and (max-width: 450px){
+    .product_accordion_wrapper{
         margin: 0;
     }
 }

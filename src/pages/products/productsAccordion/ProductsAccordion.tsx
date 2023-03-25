@@ -199,6 +199,7 @@ const ProductsAccordion: FC<TProductsAccordionProps> = ({
       <Accordion
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
+        className='product_accordion_title'
       >
         <AccordionSummary
           aria-controls="panel1d-content"
@@ -244,6 +245,7 @@ const ProductsAccordion: FC<TProductsAccordionProps> = ({
           expanded={expandedTermo}
           onChange={handleTermoChange}
           sx={{ border: "none" }}
+          className='product_accordion_title'
         >
           {/*TERMO PART ??????*/}
 
@@ -296,6 +298,7 @@ const ProductsAccordion: FC<TProductsAccordionProps> = ({
       <Accordion
         expanded={expanded === "panel2"}
         onChange={handleChange("panel2")}
+        className='product_accordion_title'
       >
         <AccordionSummary
           onClick={() => navigate("/products", { state: "metal-plastic" })}
@@ -333,6 +336,7 @@ const ProductsAccordion: FC<TProductsAccordionProps> = ({
       <Accordion
         expanded={expanded === "panel3"}
         onChange={handleChange("panel3")}
+        className='product_accordion_title'
       >
         <AccordionSummary
           onClick={() => navigate("/products", { state: "glass" })}
@@ -370,6 +374,7 @@ const ProductsAccordion: FC<TProductsAccordionProps> = ({
       <Accordion
         expanded={expanded === "panel4"}
         onChange={handleChange("panel4")}
+        className='product_accordion_title'
       >
         <AccordionSummary
           onClick={() => navigate("/products", { state: "handrails" })}

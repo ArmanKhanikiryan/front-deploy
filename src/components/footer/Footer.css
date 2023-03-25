@@ -54,8 +54,8 @@
 .copy_right > span{
     margin-left: 5px;
 }
-.social_networks{
-    margin-top: 20px;
+.works{
+    margin-top: 35px;
 }
 .social_network_item{
     margin: 5px;
@@ -68,6 +68,9 @@
     display: none;
 }
 
+.social_networks{
+    margin-top: 35px;
+}
 
 .mobile_part1{
     width: 100%;
@@ -98,7 +101,7 @@
         font-size: 13px;
     }
 }
-@media screen and  (max-width: 290px) {
+@media screen and  (max-width: 420px) {
     .mobile_part1 {
         flex-direction: column;
         justify-content: center;

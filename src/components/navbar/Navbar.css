@@ -293,7 +293,15 @@
     .menu_dropdown > span{
         display: none;
     }
+    .menu_dropdown{
+        position: absolute;
+        right: 44%;
+        top: 15px;
+    }
     .menu_icon{
+        position: absolute;
+        right: 38%;
+        top: -1px;
         width: 50px;
     }
     .dropdown_span_contact{
@@ -306,17 +314,12 @@
         display: none;
     }
     .menu_dropdown{
-        position: absolute;
-        right: 20px;
-        top: 10px;
+            right: 40%;
     }
 }
 
-@media screen and (max-width: 250px) {
+@media screen and (max-width: 300px) {
     .logo{
         display: none;
-    }
-    .menu_dropdown{
-        right: 35%;
     }
 }
