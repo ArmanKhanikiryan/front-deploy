@@ -281,7 +281,7 @@ const Products = () => {
                       {filtered.length
                           ? filtered.map(({src, name}, index) => {
                               return (
-                                  <div key={index} onClick={() => handlePopup(src)} className="product_card">
+                                  <div key={index} onClick={() => handlePopup(src)} className={popupState ? "product_card_without" : 'product_card'}>
                                       <img
                                           src={src}
                                           className="products_list_image"
