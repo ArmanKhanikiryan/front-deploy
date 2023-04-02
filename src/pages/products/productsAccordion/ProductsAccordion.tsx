@@ -255,6 +255,7 @@ const ProductsAccordion: FC<TProductsAccordionProps> = ({
               paddingLeft: "50px",
               background: "none",
               borderTop: "1px solid lightgrey",
+              width: '231px'
             }}
           >
             <Typography> {t("Termo Aluminium Profile")}</Typography>
@@ -264,8 +265,8 @@ const ProductsAccordion: FC<TProductsAccordionProps> = ({
             sx={{ paddingLeft: "85px" }}
             className={
               clicked[3].elem
-                ? "product_accordion_inner_element_clicked"
-                : "product_accordion_inner_element"
+                ? "termo_elem_clicked"
+                : "termo_elem"
             }
           >
             <Typography>{t("Termo Slides")}</Typography>
@@ -275,8 +276,8 @@ const ProductsAccordion: FC<TProductsAccordionProps> = ({
             onClick={() => navigate("/products", { state: "termo-doors" })}
             className={
               clicked[4].elem
-                ? "product_accordion_inner_element_clicked"
-                : "product_accordion_inner_element"
+                  ? "termo_elem_clicked"
+                  : "termo_elem"
             }
           >
             <Typography>{t("Termo Doors")}</Typography>
@@ -286,8 +287,8 @@ const ProductsAccordion: FC<TProductsAccordionProps> = ({
             onClick={() => navigate("/products", { state: "termo-windows" })}
             className={
               clicked[5].elem
-                ? "product_accordion_inner_element_clicked"
-                : "product_accordion_inner_element"
+                  ? "termo_elem_clicked"
+                  : "termo_elem"
             }
           >
             <Typography>{t("Termo Windows")}</Typography>
